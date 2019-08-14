@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <pict_extensions_tab1 translate="label" module="feedbuilder">
+            <label>PICT Extensions</label>
+            <sort_order>6</sort_order>
+        </pict_extensions_tab1>
+    </tabs>
+    <sections>
+        <pict_extensions_section1  translate="label" module="feedbuilder">                    
+            <label>Products Feed Builder</label>
+            <tab>pict_extensions_tab1</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>0</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>            
+            <groups>
+                <pict_extensions_group1 translate="label"> 
+                    <label>Products Feed Builder Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!--                        <user_name translate="label">
+                            <label>User Name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Feed Builder User Name</comment>
+                            <validate>required-entry</validate>
+                        </user_name>-->
+                        <password translate="label">
+                            <label>PICT Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>PICT Secret to build file for example  http://testsite.com/index.php/pict/?secret=admin123</comment>
+                            <validate>required-entry</validate>
+                        </password>
+                        <!--                      <feed_url translate="label">
+                            <label>URL</label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Please Save to get the url to generate the feed</comment>
+                        </feed_url>-->
+                        <!--                        <user_email translate="label">
+                            <label>Email Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>User Email Address</comment>
+                            <validate>required-email</validate>
+                            <validate>required-entry</validate>
+                        </user_email>-->
+                        <!--                        <is_feed_email_send translate="label">
+                            <label>Send Feed Link By Email</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Feed Link would be send if its enable</comment>
+                        </is_feed_email_send>-->
+                    </fields>
+                </pict_extensions_group1>
+                <pict_extensions_group2 translate="label"> 
+                    <label>CSV Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <feild_delim translate="label">
+                            <label>Field Delimiter</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Field Delimiter </comment>
+                            <validate>required-entry</validate>
+                        </feild_delim>
+                        <field_enclosure translate="label">
+                            <label>Field Enclosure </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Field Enclosure </comment>
+                            <validate>required-entry</validate>
+                        </field_enclosure>
+                        <csv_filename_prefix translate="label">
+                            <label>File Name Prefix</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>File Name Prefix </comment>
+                        </csv_filename_prefix>
+                    </fields>
+                </pict_extensions_group2>
+            </groups>
+        </pict_extensions_section1>
+    </sections>
+</config>
+
+
+

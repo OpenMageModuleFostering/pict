@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package>
+    <name>pict</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GNU General Public License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Make the photos you share to social networks shoppable. Magento extension needed for using PICT.</summary>
+    <description>Let the world shop the photos you share to social networks. &#xD;
+&#xD;
+In the same manner that you can tag a friend in a Facebook photo and see that tag in the Facebook news feed, PICT allow brands to tag their products in photos and let the world shop the products in those photos from the Facebook feed. &#xD;
+&#xD;
+This extension requires FREE registration at www.PICT.com &#xD;
+&#xD;
+Setup takes minutes and does not require any coding. &#xD;
+&#xD;
+How It Works&#xD;
+&#xD;
+Snap or Upload&#xD;
+&#xD;
+Use our web application to upload a photo from your computer, or snap a photo using the PICT iPhone app. &#xD;
+&#xD;
+Tag&#xD;
+&#xD;
+Tagging a product is as simple as tagging a friend on Facebook &#xD;
+&#xD;
+Share&#xD;
+&#xD;
+With the click of a button, share PICT photos to Facebook, Twitter, Pinterest, Tumblr, and Instagram. &#xD;
+&#xD;
+Measure&#xD;
+&#xD;
+See which photos and products are generating the most revenue and driving the most engagement. </description>
+    <notes>First release</notes>
+    <authors><author><name>PICT</name><user>PICT</user><email>operations@pict.com</email></author><author><name>Sajid Hussain</name><user>sajidunnar</user><email>sajidunnar@gmail.com</email></author></authors>
+    <date>2013-04-12</date>
+    <time>21:35:38</time>
+    <contents><target name="magecommunity"><dir name="Pict"><dir name="FeedBuilder"><dir name="Helper"><file name="Data.php" hash="87cd964b8008e8c0f4b706f49a6a13e8"/></dir><dir name="Model"><file name="FeedBuilder.php" hash="f22359c9c5b9341aa25a276e929e1983"/></dir><dir name="controllers"><file name="IndexController.php" hash="c4d5d1b324b666671aece80a7e7b0ec3"/></dir><dir name="etc"><file name="adminhtml.xml" hash="6a201b46b9c28faea2167d4111477f71"/><file name="config.xml" hash="8f99ba6d5026b1092332b9ccb29dea28"/><file name="system.xml" hash="2737718479917c321154e2250bc154ee"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Pict_FeedBuilder.xml" hash="4a1e7926edb8f612583951ae57cd07d8"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>5.3.22</max></php></required></dependencies>
+</package>
