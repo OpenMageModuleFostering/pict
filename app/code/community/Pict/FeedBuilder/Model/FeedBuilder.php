@@ -68,17 +68,18 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
             ; //file generation 
             //Mage::log("generateProductsFeed:: STARTED", null, "generateProductsFeed.log");
             $feedFilePath =  $this->getFeedFilePath();
-            $outPutHeaders = array(
+          $outPutHeaders = array(
                 'id', //sku
-                'title',
+                'name',
                 'description',
                 'price',
-                'link', // product image url
-                'image_link', //short desc
+                'product_url', // product image url
                 'qty',
                 'meta_title', //categoreis
-                'product_type',
-                'additional_image_link'
+                'categories',
+                'image_link', //short desc
+                'additional_image_link',
+
             );
             $csvData[] = $outPutHeaders;
             //writing headers
@@ -124,6 +125,9 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
                 #$product_collection->getSelect()->limit(1, 1);   //where $limit will be the number of results we want, $starting_from will be the index of the result set to be considered as starting point (note 0 is the index of first row)
                // echo "<br>TOTAL NEW COUNT RESULTS : " . count($collection);
                // echo "<br>PAGE NO : " . $i;
+                
+               
+
 
                 foreach ($collection->getItems() as $_product) {
 
@@ -135,7 +139,7 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
                     $productRow['price'] = $_product->getPrice(); //product's regular Price
                     //$productRow['special_price']= $_product->getSpecialPrice(); //product's special Price
                     $productRow['link'] = $_product->getProductUrl(); //product url
-                    $productRow['image_link'] = $_product->getImageUrl(); //product's image url
+                    //$productRow['image_link'] = $_product->getImageUrl(); //product's image url
                     $productRow['qty'] = $_product->getQty(); // product's QTY
                     $productRow['meta_title'] = $_product->getMetaTitle();
 
@@ -146,13 +150,30 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
                         $categoriesNames.=$category->getName() . ";";
                     }
                     $productRow['product_type'] = $categoriesNames;
-                     $galleryImages = "";
+                    $galleryImages = "";
                     
-                     $product = Mage::getModel('catalog/product')->load($_product->getId());
+                    $product = Mage::getModel('catalog/product')->load($_product->getId());
+                    
+                    $baseImage=false;
+                     $baseImageUrl="";
                     foreach ($product->getMediaGalleryImages() as $image) {
+                         if($baseImage==false)
+                         {
+                            $baseImageUrl=   $image->getUrl();
+                                 $baseImage=true;
+                                 continue;
+                         }
                         
                         $galleryImages.=$image->getUrl(). ";";
                     }
+                    $productRow['image_link'] =$baseImageUrl;
+                    // $productRow['gallery'] = $galleryImages;
+
+
+                    // foreach ($product->getMediaGalleryImages() as $image) {
+                        
+                    //     $galleryImages.=$image->getUrl(). ";";
+                    // }
 
                      $productRow['additional_image_link'] = $galleryImages;
                     //wring products to 
