@@ -72,6 +72,7 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
                 'id', //sku
                 'name',
                 'description',
+		'currency_code',
                 'price',
                 'product_url', // product image url
                 'qty',
@@ -108,6 +109,7 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
                          
                         ->addAttributeToSelect('sku')
                         ->addAttributeToSelect('name')
+			->addAttributeToSelect('currency_code')
                         ->addAttributeToSelect('price')
                         ->addAttributeToSelect('short_description')
                         ->addAttributeToSelect('meta_title')
@@ -127,7 +129,7 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
                // echo "<br>PAGE NO : " . $i;
                 
                
-
+		$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
 
                 foreach ($collection->getItems() as $_product) {
 
@@ -135,7 +137,7 @@ class Pict_FeedBuilder_Model_FeedBuilder extends Mage_Core_Model_Abstract {
                     $productRow['id'] = $_product->getSku(); //product's sku
                     $productRow['title'] = $_product->getName(); //product name
                     $productRow['description'] = $_product->getShortDescription(); //product's short description
-                    //$productRow['abc']= $_product->getDescription(); // product's long description
+                    $productRow['currency_code']= $currency_code;
                     $productRow['price'] = $_product->getPrice(); //product's regular Price
                     //$productRow['special_price']= $_product->getSpecialPrice(); //product's special Price
                     $productRow['link'] = $_product->getProductUrl(); //product url
