@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>pict</name>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <stability>stable</stability>
     <license>GNU General Public License</license>
     <channel>community</channel>
@@ -35,8 +35,8 @@ See which photos and products are generating the most revenue and driving the mo
     <notes>Newer PHP versions support</notes>
     <authors><author><name>PICT</name><user>PICT</user><email>operations@pict.com</email></author><author><name>Sajid Unar</name><user>sajidunnar</user><email>sajidunnar@gmail.com</email></author></authors>
     <date>2013-11-15</date>
-    <time>00:33:51</time>
-    <contents><target name="magecommunity"><dir name="Pict"><dir name="FeedBuilder"><dir name="Helper"><file name="Data.php" hash="87cd964b8008e8c0f4b706f49a6a13e8"/></dir><dir name="Model"><file name="FeedBuilder.php" hash="a45ded7530b5a9826474db785132d0f4"/><file name=".FeedBuilder.php.swp" hash="c10019c76d494cde65505465a53d2565"/></dir><dir name="controllers"><file name="IndexController.php" hash="c4d5d1b324b666671aece80a7e7b0ec3"/></dir><dir name="etc"><file name="adminhtml.xml" hash="6a201b46b9c28faea2167d4111477f71"/><file name="config.xml" hash="2b1971dc6ab294f148e0d6feec9ac34d"/><file name="system.xml" hash="2737718479917c321154e2250bc154ee"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Pict_FeedBuilder.xml" hash="4a1e7926edb8f612583951ae57cd07d8"/></dir></target></contents>
+    <time>01:12:45</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Pict_FeedBuilder.xml" hash=""/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.2.0</min><max>5.5.5</max></php></required></dependencies>
+    <dependencies><required><php><min>5.2.0</min><max>5.5.6</max></php></required></dependencies>
 </package>
