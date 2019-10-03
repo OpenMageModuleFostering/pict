@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Make the photos you share to social networks shoppable. Magento extension needed for using PICT.
